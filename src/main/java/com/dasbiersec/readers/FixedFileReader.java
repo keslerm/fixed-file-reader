@@ -17,7 +17,7 @@ import java.io.IOException;
 public class FixedFileReader extends FileReader
 {
 	private int count = 1;
-	private int lineLength = 50;
+	private int lineLength = 0;
 
 	public FixedFileReader(String s) throws FileNotFoundException
 	{
@@ -47,6 +47,9 @@ public class FixedFileReader extends FileReader
 	@Override
 	public int read(char[] chars, int i, int i2) throws IOException
 	{
+		if (lineLength == 0)
+			throw new IOException("Line length is not set to a valid amount. Line length MUST be set before processing.");
+
 		// Stores the total characters read into buffer
 		int r;
 
