@@ -7,7 +7,6 @@ glob:.metadata/*
 *.settings*
 bin/*
 *.log*
-*.txt
 *.jar
 *.xlsx
 *.csv
