@@ -12,7 +12,7 @@ public class FixedFileStreamReaderTest
 	@Test
 	public void testFileReadSuccess() throws IOException
 	{
-		FixedFileStreamReader fixedFileReader = new FixedFileStreamReader("target/test-classes/Test_File_1.txt");
+		FixedFileStreamReader fixedFileReader = new FixedFileStreamReader("src/test/resources/Test_File_1.txt");
 
 		fixedFileReader.setLineLength(5);
 
