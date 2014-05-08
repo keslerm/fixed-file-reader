@@ -27,6 +27,18 @@ public class FixedFileStreamReader extends InputStreamReader
 		super(new FileInputStream(s), enc);
 	}
 
+	public FixedFileStreamReader(String s, Integer length) throws FileNotFoundException
+	{
+		this(s);
+		this.lineLength = length;
+	}
+
+	public FixedFileStreamReader(String s, String enc, Integer length) throws FileNotFoundException, UnsupportedEncodingException
+	{
+		this(s, enc);
+		this.lineLength = length;
+	}
+
 	public int getLineLength()
 	{
 		return lineLength;

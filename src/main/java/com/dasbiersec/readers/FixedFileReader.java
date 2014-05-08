@@ -24,6 +24,12 @@ public class FixedFileReader extends FileReader
 		super(s);
 	}
 
+	public FixedFileReader(String s, Integer length) throws FileNotFoundException
+	{
+		super(s);
+		this.lineLength = length;
+	}
+
 	public int getLineLength()
 	{
 		return lineLength;
